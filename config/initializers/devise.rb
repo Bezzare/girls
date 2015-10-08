@@ -242,9 +242,10 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
-  config.omniauth :facebook, Rails.application.secrets.FACEBOOK_APP_ID, Rails.application.secrets.FACEBOOK_SECRET
+  # config.omniauth :facebook, Rails.application.secrets.FACEBOOK_APP_ID, Rails.application.secrets.FACEBOOK_SECRET
+  config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_SECRET"]
 
-  config.omniauth :google_oauth2, Rails.application.secrets.GOOGLE_APP_ID, Rails.application.secrets.GOOGLE_SECRET, { access_type: "online", approval_prompt: ""}
+  config.omniauth :google_oauth2, ENV["GOOGLE_APP_ID"], ENV["GOOGLE_SECRET"], { access_type: "online", approval_prompt: ""}
 
 
 

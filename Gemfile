@@ -42,7 +42,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
 gem 'shareable'
-gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+gem 'figaro'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
